@@ -5,13 +5,13 @@ set -eu
 # https://github.com/Tiryoh/ros2_setup_scripts_ubuntu
 # Licensed under the Apache License, Version 2.0
 #
-# REF: https://index.ros.org/doc/ros2/Installation/Linux-Install-Debians/
+# REF: https://docs.ros.org/en/galactic/Installation/Ubuntu-Install-Debians.html
 # by Open Robotics, licensed under CC-BY-4.0
 # source: https://github.com/ros2/ros2_documentation
 
-CHOOSE_ROS_DISTRO=foxy
+CHOOSE_ROS_DISTRO=humble
 INSTALL_PACKAGE=ros-base
-TARGET_OS=focal
+TARGET_OS=jammy
 
 # Check OS version
 if ! which lsb_release > /dev/null ; then
@@ -38,7 +38,7 @@ fi
 
 # Install
 sudo apt-get update
-sudo apt-get install -y software-properties-common
+sudo apt-get install software-properties-common
 sudo add-apt-repository universe
 sudo apt-get install -y curl gnupg2 lsb-release build-essential
 
